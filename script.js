@@ -22,6 +22,13 @@ const winningConditions = [
     [2,4,6]
 ]
 
+const changePlayer = () => {
+    playerDisplay.classList.remove(`player${currentPlayer}`);
+    currentPlayer = currentPlayer === "X" ? "0" : "X";
+    playerDisplay.innerText = currentPlayer;
+    playerDisplay.classList.add(`player${currentPlayer}`);
+}
+
 const userACtion = (tile, index) =>{
     if(isValidAction(tile) && isGameActive) {
         tile.innerText = currentPlayer;
