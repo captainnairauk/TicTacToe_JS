@@ -21,3 +21,17 @@ const winningConditions = [
     [0,4,8],
     [2,4,6]
 ]
+
+const userACtion = (tile, index) =>{
+    if(isValidAction(tile) && isGameActive) {
+        tile.innerText = currentPlayer;
+        tile.classList.add(`player${currentPlayer}`);
+        updateBoard(index);
+        handleResultValidation();
+        changePlayer();
+    }
+}
+
+tiles.forEach( (tile,index) => {
+    tile.addEventListener("click", () => userAction(tile, index));
+});
