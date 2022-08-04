@@ -62,7 +62,16 @@ header{
     color: black;
 }
 
-button{
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 1em;
+}
+
+
+#reset{
     width: 75px;
     height: 30px;
     cursor: pointer;
